@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const { MONGODB_URL } = process.env;
+const { DATABASE_URL } = process.env;
 
 exports.connect = () => {
 	mongoose
-		.connect(MONGODB_URL, {
+		.connect(DATABASE_URL, {
 			useNewUrlparser: true,
 			useUnifiedTopology: true,
 		})
@@ -16,3 +16,4 @@ exports.connect = () => {
 			process.exit(1);
 		});
 };
+``
